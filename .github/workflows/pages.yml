@@ -36,7 +36,7 @@ jobs:
           path: frontend/dist
 
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/merge-refactored-react-ui-with-new-ui'
     needs: build
     runs-on: ubuntu-latest
     permissions:
