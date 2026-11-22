@@ -2,7 +2,7 @@ name: Deploy Copycat to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [merge-refactored-react-ui-with-new-ui]
   workflow_dispatch:
 
 permissions:
