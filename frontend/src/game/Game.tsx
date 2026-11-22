@@ -113,6 +113,12 @@ export default function Game({ onBack }: { onBack?: () => void }) {
     clipUrl.current = null;
   }
 
+  function tryAgain() {
+    setFeedback(null);
+    setMessage('');
+    dispatch({ type: 'reset' });
+  }
+
   async function startTurn() {
     if (prepareOp.current) return;
     const controller = new AbortController();
@@ -229,6 +235,9 @@ export default function Game({ onBack }: { onBack?: () => void }) {
             {turn.score.worst_part && <p>Weakest part overall: <strong>{turn.score.worst_part}</strong></p>}</div>
             <ResultsReplay key={turn.key} reference={clip} attempt={turn.attempt} score={turn.score}
               onChangeClip={chooseAnother} />
+            <div className="solo-actions">
+              <button type="button" className="solo-primary" onClick={tryAgain}>Try again</button>
+            </div>
             {checking && <p role="status">Checking backend…</p>}
             {message && <p role="alert">{message}</p>}
           </section>
