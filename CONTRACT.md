@@ -7,7 +7,7 @@ Changing it needs a heads-up to the whole team first (see AGENTS.md), because ev
 Each copy is scored against the original. After all the rounds, the player with the lowest average `total`
 gets a "breaking news" shame video.
 
-## Lanes
+## Lanes - track each lane
 
 | Lane | Branch | Owns | Does |
 |---|---|---|---|
